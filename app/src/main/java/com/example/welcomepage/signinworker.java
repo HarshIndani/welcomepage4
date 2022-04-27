@@ -22,7 +22,7 @@ public class signinworker extends AppCompatActivity {
     EditText jobpref_text;
     EditText gender_text;
     EditText password_text;
-    DB1Helper DB;
+    DBHelper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class signinworker extends AppCompatActivity {
         gender_text = (EditText) findViewById(R.id.gender);
         locality_text = (EditText) findViewById(R.id.localitytext);
         password_text = (EditText) findViewById(R.id.password);
-        DB = new DB1Helper(this);
+        DB = new DBHelper(this);
 
         button1 = (Button) findViewById(R.id.button);
 
@@ -51,18 +51,18 @@ public class signinworker extends AppCompatActivity {
                 String experience = experience_text.getText().toString();
                 String address = waddress_text.getText().toString();
                 String aadhar = waadhar_text.getText().toString();
-                String wage = worker_wage_text.getText().toString();
+                String email = worker_wage_text.getText().toString();
                 String jobpref = jobpref_text.getText().toString();
                 String locality = locality_text.getText().toString();
                 String password = password_text.getText().toString();
                 String gender = gender_text.getText().toString();
 
-                if(name.equals("")||password.equals("")||age.equals("")||wage.equals("")||phone.equals("")||gender.equals("")||address.equals("")||aadhar.equals("")||locality.equals("")||jobpref.equals("")||experience.equals(""))
+                if(name.equals("")||password.equals("")||age.equals("")||email.equals("")||phone.equals("")||gender.equals("")||address.equals("")||aadhar.equals(""))
                     Toast.makeText(signinworker.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
                 else{
                     Boolean checkuser = DB.checkusername(name);
                     if(checkuser==false){
-                        Boolean insert = DB.insertData(name, password, phone, age, address, wage, gender, aadhar, locality, jobpref, experience);
+                        Boolean insert = DB.insertData(name, password, phone, age, address, email, gender, aadhar);
                         if(insert==true){
                             Toast.makeText(signinworker.this, "Registered successfully", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(),login.class);
