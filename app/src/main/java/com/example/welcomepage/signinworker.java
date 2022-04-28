@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class signinworker extends AppCompatActivity {
     Button button1;
+    Button signin;
     EditText wname_text;
     EditText wage_text;
     EditText locality_text;
@@ -79,8 +80,8 @@ public class signinworker extends AppCompatActivity {
             }
         });
 
-        button1 = (Button) findViewById(R.id.button);
-        button1.setOnClickListener(new View.OnClickListener() {
+        signin = (Button) findViewById(R.id.wsignin);
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 login();
