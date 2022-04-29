@@ -11,12 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class login extends AppCompatActivity {
     Button loginbtn_1;
     EditText username_text;
     EditText password_text;
     EditText savedmsg_text;
     Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,13 @@ public class login extends AppCompatActivity {
             }
         });
 
+        TextView create = (TextView) findViewById(R.id.create) ;
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                create();
+            }
+        });
         button = (Button) findViewById(R.id.loginbtn1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,11 +50,17 @@ public class login extends AppCompatActivity {
                 homepage();
             }
         });
-    }
 
+    }
 
     public void homepage(){
         Intent intent = new Intent(this,homepage.class);
+        startActivity(intent);
+    }
+
+    public void create ()
+    {
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }
