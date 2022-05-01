@@ -7,72 +7,38 @@
     android:background="@drawable/bgblue"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="WELCOME TO SAHAYAK"
-        android:textSize="20sp"
-        android:textStyle="bold"
+    <Button
+        android:id="@+id/signinbtn"
+        android:layout_width="260dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/signin_owner"
+        android:layout_marginTop="-320dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="#0D4F8B"
+        android:text="Signin as a Worker"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/loginbtn"
-        android:layout_width="344dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="248dp"
-        android:backgroundTint="#0D4F8B"
-        android:text="Click To Login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/signinbtn"
-        android:layout_width="181dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="20dp"
-
-        android:layout_marginBottom="126dp"
-        android:backgroundTint="#0D4F8B"
-        android:text="Click To Signin as a Worker"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/signin_owner"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
+        app:layout_constraintTop_toBottomOf="@+id/signin_owner" />
 
     <Button
         android:id="@+id/signin_owner"
-        android:layout_width="160dp"
-        android:layout_height="118dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginBottom="128dp"
+        android:layout_width="260dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="305dp"
+        android:layout_marginBottom="346dp"
         android:backgroundTint="#0D4F8B"
-        android:text="Click To Signin as an Owner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/signinbtn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="235dp"
-        android:layout_height="216dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/loginbtn"
+        android:text="Signin as an Owner"
+        app:layout_constraintBottom_toTopOf="@+id/signinbtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
