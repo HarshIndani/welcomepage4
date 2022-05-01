@@ -57,4 +57,10 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return false;
     }
+
+    public Cursor OwnerData(String name) {
+        SQLiteDatabase db1 = this.getWritableDatabase();
+        Cursor res = db1.rawQuery("select * from   users where name = ?", new String[] {name});
+        return res;
+    }
 }

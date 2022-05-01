@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class signinworker extends AppCompatActivity {
     Button button1;
+    Button signin;
     EditText wname_text;
     EditText wage_text;
     EditText locality_text;
@@ -51,23 +52,23 @@ public class signinworker extends AppCompatActivity {
                 String experience = experience_text.getText().toString();
                 String address = waddress_text.getText().toString();
                 String aadhar = waadhar_text.getText().toString();
-                String wage = worker_wage_text.getText().toString();
+                String email = worker_wage_text.getText().toString();
                 String jobpref = jobpref_text.getText().toString();
                 String locality = locality_text.getText().toString();
                 String password = password_text.getText().toString();
                 String gender = gender_text.getText().toString();
 
-                if(name.equals("")||password.equals("")||age.equals("")||wage.equals("")||phone.equals("")||gender.equals("")||address.equals("")||aadhar.equals("")||locality.equals("")||jobpref.equals("")||experience.equals(""))
+                if(name.equals("")||password.equals("")||phone.equals("")||experience.equals("")||age.equals("")||address.equals("")||email.equals("")||gender.equals("")||aadhar.equals("")||jobpref.equals("")||locality.equals(""))
                     Toast.makeText(signinworker.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
                 else{
                     Boolean checkuser = DB.checkusername(name);
                     if(checkuser==false){
-                        Boolean insert = DB.insertData(name, password, phone, age, address, wage, gender, aadhar, locality, jobpref, experience);
+                        Boolean insert = DB.insertData(name, password, phone, experience, age, address, email, gender, aadhar, jobpref, locality);
                         if(insert==true){
                             Toast.makeText(signinworker.this, "Registered successfully", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(),login.class);
-                            startActivity(intent);
-                        }else{
+
+                        }
+                        else{
                             Toast.makeText(signinworker.this, "Registration failed", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -79,8 +80,8 @@ public class signinworker extends AppCompatActivity {
             }
         });
 
-        button1 = (Button) findViewById(R.id.button);
-        button1.setOnClickListener(new View.OnClickListener() {
+        signin = (Button) findViewById(R.id.wsignin);
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 login();
