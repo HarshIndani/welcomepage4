@@ -1,224 +1,370 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signinowner">
+    tools:context=".signinowner"
+    android:background="@drawable/bgblue">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Enter Your Details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="Full Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_your_details"
+                android:textAlignment="center"
+                android:textColor="#0D4F8B"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
-        android:text="Age"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:text="Gender"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/full_name"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                 />
+            <EditText
+                android:id="@+id/nametext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_full_name"
+                android:inputType="textPersonName"
+                android:background="#E6FFFE"
+                android:ems="20"
+                android:padding="8dp"
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"
+                />
 
-    <EditText
-        android:id="@+id/phonetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Enter Phone Number"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.611"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/emailtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Enter Email Address"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.611"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addresstext" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:text="Job Requirement"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailtext" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+            <EditText
+                android:id="@+id/agetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:hint="@string/enter_age"
+                android:inputType="textPersonName"
+                android:background="#E6FFFE"
+                android:padding="8dp"
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+            <EditText
+                android:id="@+id/gendertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:hint="@string/enter_gender"
+                android:inputType="textPersonName"
+                android:background="#E6FFFE"
+                android:padding="8dp"
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                />
+
+            <EditText
+                android:id="@+id/phonetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#E6FFFE"
+                android:ems="20"
+                android:hint="@string/enter_phone_number"
+                android:inputType="phone"
+                android:padding="8dp"
+                tools:ignore="TouchTargetSizeCheck"
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+            <EditText
+                android:id="@+id/emailtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:hint="@string/enter_email_address"
+                android:inputType="textEmailAddress"
+                android:background="#E6FFFE"
+                android:padding="8dp"
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+            <EditText
+                android:id="@+id/addresstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:hint="@string/enter_address"
+                android:inputType="textPostalAddress"
+                android:background="#E6FFFE"
+                android:padding="8dp"
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/job_requirement"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+            <EditText
+                android:id="@+id/jobreqtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:hint="Maid / Car Washer"
+                android:inputType="textPassword"
+                android:background="#E6FFFE"
+                android:padding="8dp"
+                tools:ignore="HardcodedText"
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aadhar_number"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                />
+
+            <EditText
+                android:id="@+id/aadhartext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="20"
+                android:hint="@string/aadhar_nunber"
+                android:inputType="number"
+                android:maxLength="12"
+                android:background="#E6FFFE"
+                android:padding="8dp"
+                android:minHeight="48dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"
+                />
 
 
-    <EditText
-        android:id="@+id/addresstext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:hint="Enter Address"
-        android:inputType="textPostalAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.611"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonetext" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Aadhar Number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
 
-    <EditText
-        android:id="@+id/aadhartext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Aadhar No."
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.646"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jobreqtext" />
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_password"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                 />
+
+            <EditText
+                android:id="@+id/passwordtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#E6FFFE"
+                android:ems="20"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:textColorHint="#546E7A"
+                android:maxHeight="500dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:backgroundTint="#0D4F8B"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="15dp"
+                android:padding="10dp"
+                />
+
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SignIn"
+                android:backgroundTint="#0D4F8B"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="50dp"
+                android:textSize="15dp"
+                android:padding="10dp"
+                />
+        </LinearLayout>
 
 
 
-    <EditText
-        android:id="@+id/nametext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:hint="Enter Full Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <EditText
-        android:id="@+id/agetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Enter Age"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/nametext" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aadhartext"
-        app:layout_constraintVertical_bias="0.645" />
 
-    <EditText
-        android:id="@+id/gendertext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Enter Gender"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/agetext" />
 
-    <EditText
-        android:id="@+id/jobreqtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="Maid / Car Washer"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/emailtext" />
 
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="48dp"
-        android:text="Set Password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-    <EditText
-        android:id="@+id/passwordtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
-        app:layout_constraintStart_toEndOf="@+id/textView26"
-        app:layout_constraintTop_toBottomOf="@+id/aadhartext" />
 
-    <Button
-        android:id="@+id/signin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="SignIn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/passwordtext"
-        app:layout_constraintVertical_bias="0.259" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

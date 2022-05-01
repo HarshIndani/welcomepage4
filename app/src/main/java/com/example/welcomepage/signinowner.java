@@ -100,7 +100,7 @@ public class signinowner extends AppCompatActivity {
 
     }
     public void login(){
-        Intent intent = new Intent(this,login.class);
+        Intent intent = new Intent(this,homepage.class);
         startActivity(intent);
     }
 

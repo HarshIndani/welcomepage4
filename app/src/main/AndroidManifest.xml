@@ -11,24 +11,24 @@
         android:theme="@style/Theme.Welcomepage">
         <activity
             android:name=".showprofile"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".homepage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".signinowner"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".signinworker"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".login"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"/>
         <activity android:name=".splash"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
