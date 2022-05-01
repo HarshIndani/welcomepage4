@@ -42,8 +42,10 @@ public class login extends AppCompatActivity {
         });
     }
 
+
     public void homepage(){
         Intent intent = new Intent(this,homepage.class);
         startActivity(intent);
     }
 }
+
